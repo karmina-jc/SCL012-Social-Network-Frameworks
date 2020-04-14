@@ -1,10 +1,11 @@
 import React from 'react';
+import LeerPost from './Components/LeerPost';
 
 
 function App() {
   return (
     <div className="container">
-      <h1>Hola Mundo</h1>
+      <LeerPost />      
     
     </div>
   );
