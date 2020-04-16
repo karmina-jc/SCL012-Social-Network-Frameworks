@@ -11,7 +11,6 @@ function LeerPost() {
     const obtenerDatos = async () => {
 
       try {
-
         const db = firebase.firestore();
         const data = await db.collection('posts').get()
         const arrayData = data.docs.map(doc => ({ id: doc.id, ...doc.data()}))
@@ -27,18 +26,40 @@ function LeerPost() {
 
   }, [])
 
+  const eliminar = async (id) => {
+    try {
+      const db = firebase.firestore()
+      await db.collection('posts').doc(id).delete()
+      
+      const actualPost = posts.filter(e => e.id !== id)
+      setPosts(actualPost)
+            
+    } catch (error) {
+      console.log(error)      
+    }
+
+  }
+
 
   return (
     <div className="container">
-      <ul>
+      <div>
         {
           posts.map(item => {
           return (
-          <li key={item.id}>{item.text}</li>
+            <div>
+              <p key={item.id}>
+                {item.text}
+              </p>
+              <button
+                onClick={() => eliminar(item.id)}
+              >
+                Eliminar
+              </button>
+            </div>
           )})
         }        
-      </ul>
-    
+      </div>    
     </div>
   );
 }

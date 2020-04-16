@@ -18,8 +18,7 @@ function SubirPost() {
 
         const db = firebase.firestore()
         const newPost = {
-            text: post,
-            
+            text: post,            
         }
 
         const data = await db.collection('posts').add(newPost)
