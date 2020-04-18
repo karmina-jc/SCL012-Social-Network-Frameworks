@@ -1,10 +1,9 @@
-import React from 'react';
-import Login from './Components/LoginUser'
-import Register from './Components/RegisterUser'
-import LeerPost from './Components/LeerPost';
-import SubirPost from './Components/SubirPost';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-
+import React from "react";
+import Login from "./components/LoginUser";
+import Register from "./components/RegisterUser";
+import LeerPost from "./components/LeerPost";
+import SubirPost from "./components/SubirPost";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -12,15 +11,14 @@ function App() {
       <div className="container">
         <Switch>
           <Route path="/" exact>
-            Inicio...
-          </Route>
-          <Route path="/login">
             <Login />
           </Route>
-          <Route path="/SingIn">
+          <Route path="/signin">
             <Register />
           </Route>
-      
+          <Route path="/userhome" >
+            Inicio...
+          </Route>
         </Switch>
       </div>
     </Router>
