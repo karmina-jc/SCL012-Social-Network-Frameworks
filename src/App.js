@@ -4,6 +4,7 @@ import Register from "./components/RegisterUser";
 import LeerPost from "./components/LeerPost";
 import SubirPost from "./components/SubirPost";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import './App.css'
 
 function App() {
   return (
