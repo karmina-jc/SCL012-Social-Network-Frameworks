@@ -27,7 +27,7 @@ const LoginUser = (props) => {
     authUser();
   };
 
-  const authUser = React.useCallback(async () => {
+  const authUser = React.useCallback (async () => {
     try {
       const res = await firebase.auth().signInWithEmailAndPassword(email, pass);
       console.log(res.user);
