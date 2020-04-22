@@ -1,0 +1,44 @@
+.homeView {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+    padding-top: 2%;
+}
+.divLogo {
+    padding-top: 7%;  
+}
+.logoHome {
+    display: flex; 
+    width: 25vw;
+}
+.fullPost {
+    width: 90%;
+}
+.indPost {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: solid 2px black;
+    margin: 2%;   
+}
+.userProfile {
+    display: flex;
+    margin: 2%;
+}
+.userPhoto {
+    height: 10vh;
+}
+.contPost p{
+    border: solid 1px black;
+    border-radius: 10px;    
+    margin: 2%;
+    padding: 2%;
+}
+.contPost img { 
+    width: 70vw;   
+    margin: 1%;
+}
+.delete {
+    float: right;
+}

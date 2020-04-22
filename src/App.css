@@ -1,12 +1,10 @@
-* {
-    margin: auto;
-    text-align: center;    
-}
-
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: bisque;
     background-image: url('./components/images/background.png');
     background-size: 90%;
     background-repeat: no-repeat;
-    background-position: center top;      
+    background-position: center top;
 }

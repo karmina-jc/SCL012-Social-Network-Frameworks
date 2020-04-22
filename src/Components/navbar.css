@@ -1,0 +1,19 @@
+nav {
+    background-color: sandybrown;
+    width: 90%;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li {
+    list-style: none;
+    display: flex;    
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    padding: 10%;
+    width: 10vw;     
+}

@@ -1,5 +1,11 @@
-
+.container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
 .logo{
+    display: flex;
+    justify-self: center;
     width: 60vw;
     padding: 10%;
 }
@@ -8,7 +14,7 @@
     flex-direction: column;
     padding-bottom: 5%;
 }
-.loginbox > input {
+.loginbox input {
     padding: 5px 10px;
     border-style: none;
     border-bottom: solid grey;

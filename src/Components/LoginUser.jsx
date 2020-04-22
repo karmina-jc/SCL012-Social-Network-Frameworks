@@ -49,9 +49,9 @@ const LoginUser = (props) => {
 
   return (
     <div className="container">
-      <img className="logo" src={LogoBoceto} alt="logo de aplicación Boceto"/>
-      <h3>Login</h3>      
+      <img className="logo" src={LogoBoceto} alt="logo de aplicación Boceto"/>           
       <div>
+        <h3>Login</h3> 
         <form className="loginbox" onSubmit={login}>
           {error && <div>{error}</div>}
           <input
