@@ -123,17 +123,18 @@ function LeerPost() {
               );
             }
           })}
-        </div>
-        <h3>Nuevo Post</h3>
+        </div>        
         <form onSubmit={adding}>
-          <input
+          <h3>Nuevo Post</h3>
+          <textarea
+            rows="10" cols="40"
             type="text"
             placeholder="Escribe un nuevo post"
             onChange={(e) => setPost(e.target.value)}
             value={post}
-          ></input>
-          <button type="submit">Agregar</button>
+          ></textarea>
           <input type="file" onChange={(e) => upImg(e.target.files[0])} />
+          <button type="submit">Agregar</button>
         </form>
       </div>
     </div>

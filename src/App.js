@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Login from "./components/LoginUser";
 import Register from "./components/RegisterUser";
 import LeerPost from "./components/LeerPost";
@@ -7,8 +7,8 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
-      <div className="container">
+    <Router >
+      <div className="contenedor">     
         <Switch>
           <Route path="/" exact>
             <Login />          
@@ -19,8 +19,8 @@ function App() {
           <Route path="/userhome" >         
             <LeerPost />
           </Route>
-        </Switch>
-      </div>
+        </Switch>  
+      </div>  
     </Router>
   );
 }

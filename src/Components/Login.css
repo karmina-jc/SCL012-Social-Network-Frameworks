@@ -1,13 +1,15 @@
 .container {
-    text-align: center;
     display: flex;
+    text-align: center;
     justify-content: center;
+    flex-direction: column;
 }
 .logo{
     display: flex;
-    justify-self: center;
-    width: 60vw;
-    padding: 10%;
+    justify-self: center;   
+    width: 50vw;
+    padding-top: 10%;
+    margin-left: 25%;
 }
 .loginbox {
     display: flex;
