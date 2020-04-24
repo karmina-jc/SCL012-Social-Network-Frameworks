@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.logo{
+    display: flex;
+    justify-self: center;   
+    width: 50vw;
+    padding-top: 10%;
+    margin-left: 25%;
+}
+.loginbox {
+    display: flex;
+    flex-direction: column;
+}
+.loginbox input {
+    padding: 5px 10px;
+    border-style: none;
+    border-bottom: solid grey;
+    background: none;
+    margin: 1% auto;    
+}
+button  {
+    padding: 5px 52px;
+    margin: 2% auto;
+    background: none;
+    border-style: none;
+    background-image: url('./images/marge-botton.png');
+    background-repeat: no-repeat;
+    
+}
+.btnResgistrate {
+    padding: 5px 48px;
+    background: none;
+    border-style: none;
+    background-image: url('./images/marge-botton.png');
+    background-repeat: no-repeat;
+    margin-bottom: 8%;
+}

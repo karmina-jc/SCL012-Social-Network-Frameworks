@@ -1,0 +1,30 @@
+.fullRegister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 20%; 
+}
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3% 10%;
+    
+}
+.registerForm input {
+    display: flex;   
+    padding: 5px 10px;
+    border-style: none;
+    border-bottom: solid grey;
+    background: none;
+    margin: 2% 10%;   
+}
+.btnSignin {
+    padding: 5px 40px;
+    background: none;
+    border-style: none;
+    background-image: url('./images/marge-botton.png');
+    background-repeat: no-repeat;
+    margin-bottom: 8%;
+}

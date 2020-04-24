@@ -1,171 +1,92 @@
-# Rehaciendo tu red social usando librerías y frameworks
+
+![img Prototipo](./src/components/images/logo-boceto.png)
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Entrega](#7-entrega)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+* [1. Definición del Producto](#1-Definición-del-producto)
+* [2. Objetivos](#2-¿Cuáles-son-los-objetivos-de-estos-usuarios(as)-en-relación-con-el-producto?)
+* [3. Necesidades del usuario](#3-¿Cuáles-son-los-datos-más-relevantes-que-quieren-ver-en-la-interfaz-y-por-qué?)
+* [4. Historias de usuario](#4-Historias-de-usuario)
+* [5. Diseño de la interfaz de usuario](#5-diseño-de-la-interfaz-de-usuario)
+* [6. Prototipos](#6-Prototipos)
+* [7. Test de usabilidad](#7-Test-de-usabilidad)
+* [8. Herramientas](#8-Herramientas-utilizadas)
+* [9. Planificación](#9-planificación-del-proyecto)
 
 ***
 
-## 1. Preámbulo
+## 1. Definición del Producto 📝
 
-[React](https://es.reactjs.org/), [Angular](https://angular.io/) y [Vue](https://vuejs.org/)
-son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
-lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
-En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
-es difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
-Al elegir un _framework_ o _librería_ para nuestra interfaz, nos apoyamos en una
-serie de convenciones e implementaciones _probadas_ y _documentadas_ para
-resolver un problema común a toda interfaz web. Esto nos permite concentrarnos
-mejor (dedicar más tiempo) en las caractrísticas _específicas_ de
-nuestra aplicación.
+Desde hace unos años, con el mayor acceso a la tecnología, se ha dado un aumento en la práctica de la ilustración y la animación digital a nivel nacional, este auge se vio coronado con el premio oscar recibido por la productora [Punkrobot](http://punkrobot.cl/) el año 2015 por su cortometraje *La Historia de un Oso*. El galardón, trajo consigo un aumento en la oferta académica y laboral para ilustradores y animadores digitales, lo cual ha abierto espacios a más personas para aprender del área. Sin embargo, al buscar dentro del ambiente local no fue posible encontrar un espacio definido en el cual los artistas puedan hacer comunidad, donde compartir sus trabajos, colaborar con otros artistas o bien crear nuevas instancias de aprendizaje y reunión. Frente a esta necesidad nace Boceto, una red social que reune a los ilustradores y animadores digitales chilenos, permitiendoles crear redes de contacto, compartir tips sobre insumos, recibir feedback de artistas más experimentados, etc. 
+A fin de entender las necesidades de nuestro usuarios, realizamos una [encuesta](https://docs.google.com/forms/d/1LuH0ZqQb1Tvlx9MY_JcZWW0Gi54LPixvdm5keL2yaYo/edit#responses) a través de Google Forms, en donde el 95% de los artistas encuestados dice que si utilizaría una red social específica para ellos y algunos comentarios sacan a relucir que actualmente no cuentan con un espacio dedicado a ellos, su trabajo y el rubro. 
 
-Cuando elegimos una de estas tecnologías no solo importamos un pedacito de
-código para reusarlo (lo cuál es un gran valor per se), si no que adoptamos una
-**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas
-**abstracciones**, un **vocabulario**, una **comunidad**, ...
+## 2. ¿Cuáles son los objetivos de estos usuarios(as) en relación con el producto? 🎯
 
-Como desarrolladora Front-end, estos kits de desarrollo pueden resultarte
-de gran ayuda para implementar rápidamente características de los proyectos en
-los que trabajes.
+Los objetivos de los(as) usarios(as) de nuestra aplicación decidimos plasmarlos en el eslogan de Boceto: "crea, compartir y colaborar". Un espacio que fomente su creatividad, les permita compartir su trabajo y retroalimentar el trabajo de otros asi como crear instancias de colaboracion con otros artistas consiguiento promover la comunicación y generar así una red de contactos activa y nutrida. 
 
-![caracoles](http://www.animated-photography.com/images/portfolio/full/Evolution.jpg)
+Boceto, responde a la necesidad de la comunidad de ilustradores(as) de compartir sus trabajos, recibir feedback, poder visualizar trabajos de otros(as) artistas(a fin de obtener inspiración y aprendizaje), información acerca de concursos/talleres/desafíos/ofertas de empleo entre otros. 
 
-## 2. Resumen del proyecto
+## 3. ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 
-En este proyecto tendrás la oportunidad de _re-escribir_ tu anterior proyecto de
-la _Red Social_, pero esta vez usando un _framework_ o una _librería_.
+A partir de la encuesta realizada, rescatamos algunos comentarios que reflejan lo que la gente espera encontrar en esta red social: 
 
-Creemos que una muy buena manera de profundizar en estas herramientas puede ser
-eliminando de la ecuación el hecho de que tengas que entender un proyecto desde
-cero, su alcance, sus particularidades, el flujo, las validaciones, etc.
-Concéntrate en aprender y utilizar estas nuevas tecnologías.
+>   "Es una muy buena iniciativa, temas como el uso de la animación en otras áreas es algo que no he visto mucho, como en ciencias por ejemplo."
 
-El alcance del proyecto y el detalle de sus características es exactamente
-[el mismo que el original](https://github.com/Laboratoria/curricula-js/tree/v2.x/projects/03-social-network),
-incluyendo la parte de Hacker Edition pero excluyendo la parte de UX.
+> "Que el enfoque fuese profesional, no en términos de segregación, sino que aun siendo red social, no de espacio a malas intenciones (trolls, mensajes de odio y otros). Tristemente es lo que sucede cuando no hay administración adecuada de redes, y muchas veces terminan por automatizar dicha administración con bots, lo que pasa a ser un desastre" 
 
-## 3. Objetivos de aprendizaje
-
-El objetivo principal de aprendizaje es familiarizarse con el desarrollo web
-usando el _framework_ o _librería_ elegido, y todo lo que ello conlleva:
-**documentación**, **arquitectura**, **principios de diseño**, **paradigma**,
-**abstracciones**, **vocabulario**, **herramientas**, **comunidad**, ...
-
-Por otro lado, tener que _re-escribir_ un programa es una experiencia de
-aprendizaje muy valiosa en sí misma, llevándonos a re-evaluar e iterar sobre
-un producto o prototipo. Dada la velocidad a la que evoluciona la tecnología
-web, es muy común tener que enfrentarse a este tipo de escenario donde decidimos
-(o alguien decide por nosotros) que lo mejor para seguir evolucionando una
-aplicación es re-escribirla usando una nueva tecnología.
-
-## 4. Consideraciones generales
-
-Este proyecto se debe "resolver" de manera individual. Puedes ponerte de acuerdo con tu equipo del proyecto anterior y realizar la misma Red Social, pero recuerda que el proyecto y su respectivo repositorio deben ser individuales. También puedes hacer un proyecto de cero o utilizar alguno de los otros equipos que te haya gustado.
-
-Investiga un poco sobre estas tres herramientas propuestas (React, Angular y
-Vue) y elije con cuál quieren trabajar.
-
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este repositorio.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-Ver [03-social-network](https://github.com/Laboratoria/curricula-js/tree/v2.x/projects/03-social-network#parte-obligatoria).
-
-## 6. Hacker edition
-
-Ver [03-social-network](https://github.com/Laboratoria/curricula-js/tree/v2.x/projects/03-social-network#hacker-edition).
+> "Estamos muy solos en todo sentido. No nos conocemos entre nosotros, ni el resto. Por esto no sabemos cotizar nuestro trabajo ni como vivir de él. (...)nosotros como ilustradores tampoco sabemos sacarle partido a lo que hacemos, qué vende más, por qué, que significa tener un estilo propio, en qué nivel de ilustrador/animador estoy, estoy haciendo algo único o más del montón, podría sacar mejor provecho de mi trabajo si colaboro con otros artistas, etc"
 
 
-***
+## 4. Historias de usuario
 
-## 7. Pistas, tips y lecturas complementarias
+Con los datos obtenidos de la encuesta, y los comentarios que nos han dejado, creamos nuestra primera historia de usuario:
 
-Antes de elegir un framework, te recomendamos leer los siguientes artículos:
+HU1: "Yo como ilustrador/animador(a) quiero publicar mi trabajo (dibujo) para recibir feedback"
 
-* [The deepest reason why modern JavaScript frameworks exist](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445)
-* [Should I use frameworks or libraries such as Angular, React, or VueJS or not?](https://dev.to/ericpaulbasbas/should-i-use-frameworks-or-libraries-such-as-angular-react-or-vuejs-or-not-3dp)
+HU2: "Yo como ilustrador/animador(a) quiero poder conocer de datos que otros*
 
-Hemos preparado algunos videos introductorios:
 
-* [Introducción a Frameworks de JavaScript (Lupo)](https://laboratoria-1.wistia.com/medias/22j8ut23y5)
-* [Introducción a Angular (Fabián)](https://laboratoria-1.wistia.com/medias/2dxpgs2s59)
-* [Introducción a React (Elizabeth)](https://es.reactjs.org/)
-* [Introducción a Vue (Luis)](https://vuejs.org/)
+## 5. Diseño de la Interfaz de Usuario 🎨
 
-No dejes de explorar la documentación oficial de cada herramienta:
+Respecto al diseño, como equipo tratamos de acercanos al ambiente que en común mantienen tanto ilustradores como animadores digitales, apelando que "toda idea  parte de un boceto", nos propusimos, crear una interfaz para rememorar la clásica libreta de dibujo (croquera) en la cual los artistas dan sus primeros trazos antes de llegar a las versiones finales  en formato digital. Este elemento del fondo se complementa con la elección de colores de gama café y anaranjado que complementa el tono claro del fondo y la gama de colores sepia del logo:
 
-### React
+Paleta de colores: 
+#FFC32F, #DEAE3E
+El color naranja evoca energía, diversión y sociabilidad
+El color café produce armonía, además se le conoce como el color de los artistas, por el tono de las tintas antiguas.
 
-* [React - docs oficiales](https://es.reactjs.org/)
-* [React - tutorial](https://egghead.io/courses/the-beginner-s-guide-to-react)
-* [Redux - tutorial](https://egghead.io/courses/getting-started-with-redux)
-* [create-react-app](https://github.com/facebook/create-react-app)
-* [React js en español - tutorial básico, primeros pasos y ejemplos - frontendlabs.io](https://frontendlabs.io/3158--react-js-espanol-tutorial-basico-primeros-pasos-ejemplos)
+ Los detalles de botones, logotipo e íconos emulan el trazo "a lápiz" para dar una versión lúdica con un toque "retro" de los elementos, además de crear una identidad gráfica dentro de la interfaz reconocible para el usuario.  
 
-### Angular
+Dentro de la diagramación se optó por un espacio limpio que permitiera dar protagonismo al trabajo de los usuarios y el contenido a compratir, dejando un menú de navegación básico y un espacio para el perfil del usuario que a la vez agrupe sus trabajos y los portafolios digitales externos en caso de tenerlos.
 
-* [Angular - docs oficiales](https://angular.io/)
-* [Angular CLI](https://cli.angular.io/)
-* [Angular - tutorial](https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ)
-* [Angular - crud](https://www.youtube.com/watch?v=6wVolJfXn1c)
-* [Angular - redux](https://www.youtube.com/playlist?list=PLCKuOXG0bPi3FtoplJe0JOpiV6OyK30wd)
+## 6. Prototipos 
 
-### Vue
+[Prototipos de Baja Fidelidad] 
+![img Prototipo](./img/ingreso.jpeg)
 
-* [Vue - docs oficiales](https://vuejs.org/)
-* [Vue CLI](https://cli.vuejs.org/)
-* [Vue- adicional](https://scotch.io/search?q=vue)
-* [Vue- school](https://vueschool.io/)
+[Prototipo de Alta Fidelidad para app móvil](https://www.figma.com/file/pFeY0gdNy8pe4n8ntTPW7M/Boceto-app?node-id=0%3A1)
 
-Independientemente de si eliges React, Vue o Angular, todos estas herramientes
-se usan muchas veces en conjunción con Redux como manejador de _estado_.
+[Prototipo de Alta Fidelidad para escritorio](https://www.figma.com/file/K0EXfq6Ldq3x5qK7Q9CVLy/Boceto-web?node-id=0%3A1)
 
-* [Redux - docs oficiales](https://redux.js.org/)
+## 7. Test de usabilidad
+[Test de usabilidad 1](https://www.figma.com/file/K0EXfq6Ldq3x5qK7Q9CVLy/Boceto-web?node-id=0%3A1)
 
-## 9. Checklist
+[Test de usabilidad 2](https://www.loom.com/share/3e0b4170a656471c98312044b4c8b1e8)
 
-### General
+### Iteraciones
+Tras los test de usabilidad con el prototipo de alta fidelidad, detectamos que uno de los íconos puestos en el menú de navegación no era entendible por los usuarios. Así es como se realizó la primera iteración del producto, donde cambiamos el ícono por uno más intuitivo.
+Con respecto a la funcionalidad, los usuarios lograron rapidamente la tarea que se les dió, que correspondía a subir una imagen al muro de la aplicación.
 
-* [ ] Producto final sigue los lineamientos del diseño.
 
-### `README.md`
+## 8. Herramientas Utilizadas 🛠
+* JavaScript(ES6)
+* HTML5
+* CSS3
+* Firebase
+* Git Github
+* Figma
 
-* [ ] Información sobre instalación y despliegue de tu aplicación.
 
-### Pruebas / tests
+## 9. Planificación del proyecto ⏱
 
-* [ ] Tests unitarios cubren un mínimo del 70% de statements, functions, lines,
-  y branches.
-* [ ] Pasa tests (y linters) (`npm test`).
-
-### Creación de cuenta (sign up)
-
-* [ ] Permite crear cuenta.
-* [ ] Valida email.
-* [ ] Valida password.
-* [ ] Muestra mensajes de error.
-
-### Inicio de sesión (sign in)
-
-* [ ] Permite iniciar sesión.
-* [ ] Valida email.
-* [ ] Valida password.
-* [ ] Muestra mensajes de error.
-
-### Muro (wall/feed)
-
-* [ ] Muestra _muro_.
-* [ ] Permite publicar nuevos posts.
-* [ ] Permite eliminar posts.
-* [ ] Pide confirmación antes de borrar posts.
-* [ ] Permite editar posts (in place).
-* [ ] Permite filtrar posts por público/amigos.
-* [ ] Permite marcar posts como _gustados_ (like).
+La planificación fué realizada con  [Trello](https://trello.com/b/UNUWeMnj/red-social-fe1).

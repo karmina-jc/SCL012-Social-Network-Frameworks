@@ -1,11 +1,13 @@
 import React from 'react';
 import { firebase } from "../config/firebase";
 import { withRouter } from "react-router-dom";
+import "./register.css";
 
 
 
 const RegisterUser = (props) => {
 
+  const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [pass, setPass] = React.useState("");
   const [error, setError] = React.useState(null)
@@ -34,7 +36,7 @@ const RegisterUser = (props) => {
       const res = await firebase.auth().createUserWithEmailAndPassword(email, pass)
       console.log(res)
       await firebase.firestore().collection('users').doc(res.user.email).set({
-        displayName: res.user.displayName,
+        displayName: name,
         photoURL: res.user.photoURL,
         email: res.user.email,
         uid: res.user.uid
@@ -54,14 +56,13 @@ const RegisterUser = (props) => {
       
     }
 
-  }, [email, pass, props.history])
+  }, [email, pass, name, props.history])
 
   return (
-    <div>
+    <div className="fullRegister">
       <h3>Registro</h3>
-      <hr />
       <div>
-        <form onSubmit={signIn}>
+        <form className="registerForm" onSubmit={signIn}>
           {
             error && (
               <div>
@@ -69,22 +70,25 @@ const RegisterUser = (props) => {
               </div>
             )
           }
-          <input type="text" placeholder="Nombre" />
-
+          <input 
+          type="text" 
+          placeholder="Nombre"
+          onChange={(e) => setName(e.target.value)}
+          value={name}
+          />
           <input
             type="email"
             placeholder="correo Electronico"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
-
           <input
             type="password"
             placeholder="Contraseña"
             onChange={(e) => setPass(e.target.value)}
             value={pass}
           />
-          <button type="submit">Registrarse</button>
+          <button className="btnSignin" type="submit">Registrarse</button>
         </form>
       </div>
     </div>

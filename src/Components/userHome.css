@@ -1,0 +1,60 @@
+.homeView {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    padding-top: 2%;
+}
+.divLogo {
+    padding-top: 7%;  
+}
+.logoHome {
+    display: flex; 
+    width: 25vw;
+    margin-left: 8%;
+}
+.fullPost {
+    margin: 2% 10%;
+}
+.indPost {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: solid 2px black;
+    margin: 2%;   
+}
+.userProfile {
+    display: flex;
+    margin: 2%;
+}
+.userPhoto {
+    height: 10vh;
+}
+.btnLike {
+    padding: 1px 62px; 
+    
+}
+.contPost p{
+    border: solid 1px black;
+    border-radius: 10px;    
+    margin: 2%;
+    padding: 2%;
+}
+.contPost img {       
+    max-width: 90%;
+}
+.delete {
+    float: right;
+}
+.homeView form {
+    display: flex;
+    flex-direction: column;
+    margin: 1% 20%;
+}
+.homeView form input:first-of-type {
+    padding: 2%;
+    border: none;
+    background-color: antiquewhite;
+}
+.homeView form input {
+    margin: 2%;
+}
