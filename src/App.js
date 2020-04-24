@@ -1,12 +1,27 @@
-import React from 'react';
-
+import React from "react";
+import Login from "./components/LoginUser";
+import Register from "./components/RegisterUser";
+import LeerPost from "./components/LeerPost";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import './App.css'
 
 function App() {
   return (
-    <div className="container">
-      <h1>Hola Mundo</h1>
-    
-    </div>
+    <Router >
+      <div className="contenedor">     
+        <Switch>
+          <Route path="/" exact>
+            <Login />          
+          </Route>
+          <Route path="/signin">
+            <Register />
+          </Route>
+          <Route path="/userhome" >         
+            <LeerPost />
+          </Route>
+        </Switch>  
+      </div>  
+    </Router>
   );
 }
 
