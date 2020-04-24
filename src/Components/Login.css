@@ -14,7 +14,6 @@
 .loginbox {
     display: flex;
     flex-direction: column;
-    padding-bottom: 5%;
 }
 .loginbox input {
     padding: 5px 10px;
@@ -23,8 +22,8 @@
     background: none;
     margin: 1% auto;    
 }
-button{
-    padding: 5px 55px;
+button  {
+    padding: 5px 52px;
     margin: 2% auto;
     background: none;
     border-style: none;
@@ -34,9 +33,9 @@ button{
 }
 .btnResgistrate {
     padding: 5px 48px;
-    margin: 2% auto;
     background: none;
     border-style: none;
     background-image: url('./images/marge-botton.png');
     background-repeat: no-repeat;
+    margin-bottom: 8%;
 }

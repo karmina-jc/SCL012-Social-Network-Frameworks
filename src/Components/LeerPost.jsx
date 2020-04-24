@@ -89,7 +89,7 @@ function LeerPost() {
                 <div className="indPost" key={item.id}>
                   <div className="userProfile">
                     <img className="userPhoto" src={UserPhoto} alt="" />
-                    <p>Nombre Usuario</p>
+                    <p>Nombre Usuario</p>                   
                   </div>
                   <div className="contPost">
                     <img src={item.img} alt="" />

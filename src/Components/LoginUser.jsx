@@ -1,6 +1,6 @@
 import React from "react";
 import { firebase } from "../config/firebase";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import LogoBoceto from "./images/logo-boceto.png";
 import './Login.css'
 
@@ -67,9 +67,11 @@ const LoginUser = (props) => {
             value={pass}
           />
           <button type="submit">Ingresa</button>
-          <p>¿Eres Nuevo? </p>
-          <button className="btnResgistrate">Registrate</button>
         </form>
+          <p>¿Eres Nuevo? </p>          
+            <Link to="/signin">
+              <button className="btnResgistrate">Registrate</button>
+            </Link>          
       </div>      
     </div>
   );
