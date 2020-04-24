@@ -1,14 +1,28 @@
 import React from "react";
 import { firebase } from "../config/firebase";
+import { withRouter } from "react-router-dom";
 import LogoBoceto from "./images/logo-boceto.png";
 import UserPhoto from "./images/photo-user-tester.png";
 import Navbar from "./Navbar";
 import "./userHome.css";
 
-function LeerPost() {
+function LeerPost(props) {
   const [posts, setPosts] = React.useState([]);
   const [post, setPost] = React.useState("");
   const [postImg, setPostImg] = React.useState(false);
+  const [user, setUser] = React.useState(props.firebaseUser)
+
+
+
+  React.useEffect(() => {
+      if(firebase.auth().currentUser){
+          console.log('existe')
+          setUser(firebase.auth().currentUser)
+      }else{
+          console.log('no existe')
+          props.history.push('/')
+      }
+  }, [props.history])
 
   React.useEffect(() => {
     const obtenerDatos = async () => {
@@ -141,4 +155,4 @@ function LeerPost() {
   );
 }
 
-export default LeerPost;
+export default withRouter(LeerPost);

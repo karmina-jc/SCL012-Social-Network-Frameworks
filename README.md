@@ -1,5 +1,5 @@
 
-![img Prototipo](./src/components/images/logo-boceto.png)
+![img logo Boceto](./img/logo-boceto.png)
 
 ## Índice
 
