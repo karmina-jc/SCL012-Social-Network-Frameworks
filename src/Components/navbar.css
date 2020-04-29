@@ -2,6 +2,12 @@ nav {
     background-color: sandybrown;
     margin: 0% 6%;
 }
+.browserNav {
+    display: flex;
+}
+.mobileNav {
+    display: none;
+}
 nav ul {
     display: flex;
     justify-content: flex-end;
@@ -15,27 +21,27 @@ nav ul li a {
     color: black;
     text-decoration: none;
     list-style: none;
-    padding: 5px 20px;
+    padding: 5px 10px;
 }
 nav ul li:hover{
     background-color: rgb(250, 182, 123);
 }
 .navIcon {
     max-width: 30%;
-    display: none;
 }
 @media (max-width: 870px){
+   .mobileNav{
+       display: flex;
+
+   }
+   nav ul {
+       display: flex;
+       justify-content: flex-end;   
+   }
     nav ul li {
-        list-style: none;
-        padding: 1%;
-    }
-    .navIcon {
-        display: inline-block;
-    }
-    nav ul li a {
-        display: none;
-    }
-    nav ul li input {
-        display: none;
-    }
+      padding: 5px
+   }
+   .browserNav {
+       display: none;
+   }
 }
