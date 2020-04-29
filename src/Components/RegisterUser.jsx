@@ -78,7 +78,7 @@ const RegisterUser = (props) => {
           />
           <input
             type="email"
-            placeholder="correo Electronico"
+            placeholder="Correo Electrónico"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
