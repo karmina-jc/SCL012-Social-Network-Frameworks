@@ -1,5 +1,5 @@
 import React from "react";
-import { firebase } from '../config/firebase';
+import { firebase } from "../config/firebase";
 import { Link, withRouter } from "react-router-dom";
 import Favorite from "./images/heart.png";
 import Logout from "./images/logout.png";
@@ -11,7 +11,9 @@ import "./navbar.css";
 function Navbar(props) {
   const logout = () => {
     if (props.user) {
-      firebase.auth().signOut()
+      firebase
+        .auth()
+        .signOut()
         .then(() => {
           props.history.push("/");
         });
@@ -22,34 +24,6 @@ function Navbar(props) {
     <div>
       <nav>
         <ul>
-          <Link to="/userhome">
-            <li>
-              <a href="/userhome">Inicio</a>
-              <img  className="navIcon" src={Home} alt=""/>
-            </li>
-          </Link>
-          <Link to="/myworks">
-            <li>
-              <a href="/myworks">Mis Trabajos</a>
-              <img className="navIcon" src={MyWorks} alt=""/>
-            </li>
-          </Link>
-          <Link to="/favorites">
-            <li>
-              <a href="/favorites">Favoritos</a>
-              <img className="navIcon" src={Favorite} alt=""/>
-            </li>
-          </Link>
-          <Link to="/search"><img className="navIcon" src={Search} alt=""/>
-            <li>
-              <input type="search" placeholder="Buscar"/>            
-            </li>
-          </Link>
-          <Link to="/">
-            <li>
-              <img className="navIcon" src={Logout} alt=""/><a href="/">Cerrar Seción</a>            
-            </li>
-          </Link>
           <div className="browserNav">
             <li>
               <Link to="/userhome">Inicio</Link>
@@ -66,8 +40,7 @@ function Navbar(props) {
               </Link>
             </li>
             <li>
-              <Link to="/"
-                onClick={() => logout()}>
+              <Link to="/" onClick={() => logout()}>
                 Cerrar Seción
               </Link>
             </li>
