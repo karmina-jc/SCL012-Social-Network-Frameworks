@@ -41,7 +41,7 @@ function Navbar(props) {
             </li>
             <li>
               <Link to="/" onClick={() => logout()}>
-                Cerrar Seción
+                Cerrar Sesión
               </Link>
             </li>
           </div>
