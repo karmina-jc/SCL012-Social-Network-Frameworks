@@ -35,7 +35,7 @@ function Navbar(props) {
               <Link to="/favorites">Favoritos</Link>
             </li>
             <li>
-              <Link to="/search">
+              <Link to="/userhome">
                 <input type="search" placeholder="Buscar" />
               </Link>
             </li>
